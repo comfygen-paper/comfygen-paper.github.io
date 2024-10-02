@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ComfyGen: Prompt-Adaptive Workflows for Text-to-Image Generation">
+  <meta name="keywords" content="Text-to-image, Pipeline generation, Workflows, ComfyUI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComfyGen: Prompt-Adaptive Workflows for Text-to-Image Generation</title>
+
+<!--   Global site tag (gtag.js) - Google Analytics-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5ZVQZ7NHC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y5ZVQZ7NHC');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ComfyGen: Prompt-Adaptive Workflows for Text-to-Image Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://rinongal.github.io/">Rinon Gal</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=J4Kj7EIAAAAJ&hl=en">Adi Haviv</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yuval-alaluf.github.io/">Yuval Alaluf</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.tau.ac.il/~amberman/">Amit H. Bermano</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://research.nvidia.com/person/gal-chechik">Gal Chechik</a><sup>2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tel Aviv University,</span>
+            <span class="author-block"><sup>2</sup>NVIDIA</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2208.01618"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+<!--              <span class="link-block">-->
+<!--                <a href="https://arxiv.org/abs/2108.00946"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+<!--                </a>-->
+<!--              </span>-->
+
+              <!-- Video Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fab fa-youtube"></i>-->
+<!--                  </span>-->
+<!--                  <span>Video</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/rinongal/textual_inversion"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+
+              <!-- Colab Demo Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="http://colab.research.google.com/github/rinongal/stylegan-nada/blob/main/stylegan_nada.ipynb"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fas fa-infinity"></i>-->
+<!--                  </span>-->
+<!--                  <span>Colab</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <!-- Replicate Demo Link. -->
+<!--              <span class="link-block">-->
+<!--                <a href="https://replicate.com/rinongal/stylegan-nada"-->
+<!--                   class="external-link button is-normal is-rounded is-dark">-->
+<!--&lt;!&ndash;                  <span>R </span>&ndash;&gt;-->
+<!--                  <span class="icon">-->
+<!--                      <i class="fas fa-play"></i>-->
+<!--                  </span>-->
+<!--                  <span>Demo</span>-->
+<!--                </a>-->
+<!--              </span>-->
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h1 class="title is-4">TL;DR: We predict a ComfyUI workflow that matches a user's text-to-image prompt. Generating images with these prompt-specific flows improves quality. </h1>
+        </div>
+      </div>
+      
+      <img src="static/images/teaser/teaser.jpg"
+                   alt="Teaser."/>
+      <h2 class="subtitle has-text-centered">
+        The text-to-image user community has largely moved from using monolithic models, to complex workflows that combine fine-tuned base models, LoRAs and embeddings, super resolution steps, prompt refiners and more.
+        <br><br>
+        Building effective workflows requires significant expertise because of the large number of available components, their complex interdependence, and their dependence on the generation domain.
+        <br><br>
+        We introduce the novel task of <i>prompt-adaptive workflow generation</i>, where the goal is to learn how to automate this process and tailor an effective workflow to each user prompt. We propose two LLM baselines to tackle this task, and show that they offer a new path to improving image generation performance.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="subtitle has-text-centered">ComfyGen can produce high quality results and generalize to diverse domains. All images were created with SDXL-scale models (no FLUX!)</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="publication-img">
+            <img id="architecture" src="static/images/grids/grid_1.jpg"/>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>The practical use of text-to-image generation has evolved from simple, monolithic models to complex workflows that combine multiple specialized components. While workflow-based approaches can lead to improved image quality, crafting effective workflows requires significant expertise, owing to the large number of available components, their complex inter-dependence, and their dependence on the generation prompt. </p>
+          <p>Here, we introduce the novel task of \textit{prompt-adaptive workflow generation}, where the goal is to automatically tailor a workflow to each user prompt. </p>
+          <p>We propose two LLM-based approaches to tackle this task: a tuning-based method that learns from user-preference data, and a training-free method that uses the LLM to select existing flows. Both approaches lead to improved image quality when compared to monolithic models or generic, prompt-independent workflows. Our work shows that prompt-dependent flow prediction offers a new pathway to improving text-to-image generation quality, complementing existing research directions in the field.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <!--/ Architecture. -->
+        <div class="section-title">
+          <h2 class="title is-3 is-centered">How does it work?</h2>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <!-- <div class="column">
+            <div class="publication-img">
+              <img id="architecture" src="static/images/training/training.JPG"/>
+            </div>
+          </div> -->
+        </div>
+        <p>
+        We base our work around ComfyUI, an open source tool for designing and executing text-to-image pipelines. These pipelines are represented as a JSON, which is a natural format for an LLM to predict.
+        <br><br>To teach the LLM which flows are a good match for a prompt, we collect a set of human-created ComfyUI workflows, and augment them by randomly swapping parameters like the base model, the LoRAs, the sampler or even the number of steps and guidance scales.
+        <br><br>We further collect a set of 500 prompts, and use them to generate images with each flow in our set. Then, we score these images using an ensamble of aesthetic and human preference predictors. This gives us a set of (prompt, flow, score) triplets.
+        <br><br>We then explore two approaches: First, an in-context approach, where we give the LLM a table of flows and their scores across categories, and ask it to pick one that best matches a new prompt.
+        Second, a fine-tuning approach, where we provide the LLM with the input prompt and a score, and ask it to predict the flow that achieved this score. At inference time, we simply provide the LLM with a prompt and a high score, and ask it to predict a flow that matches it.
+        </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+      <div class="section-title">
+        <h2 class="title is-3">Comparisons</h2>
+      </div>
+
+    <div class="columns is-centered">
+
+      <!-- Cross domain. -->
+      <div class="column">
+        <div class="content">
+
+          <p>
+            We compared our model to two classes of baselines: monolithic models (SDXL, the most popular fine-tuned versions, and a DPO-optimized baseline), and fixed prompt-independent flows. Our approach outperforms them all on both human preference metrics and on prompt-alignment benchmarks<br>
+          </p>
+            <div class="publication-img">
+              <img id="style_transfer" src="static/images/comparisons/civitai.jpg"/>
+            </div>
+
+            <h2 class="subtitle has-text-centered is-5">
+              Comparisons on user-created prompts from <a href="https://civitai.com/">CivitAI</a>  
+            </h2>
+            <br><br>
+            <div class="publication-img">
+              <img id="style_transfer" src="static/images/comparisons/user_study.jpg"/>
+            </div>
+
+            <h2 class="subtitle has-text-centered is-5">
+              User study results on user-created prompts from <a href="https://civitai.com/">CivitAI</a>  
+            </h2>
+            <br><br>
+
+            <div class="publication-img">
+              <img id="style_transfer" src="static/images/comparisons/geneval.jpg"/>
+            </div>
+
+            <h2 class="subtitle has-text-centered is-5">
+              Comparisons on prompts from the GenEval benchmark  
+            </h2>
+            <br><br>
+
+            <div class="publication-img">
+              <img id="style_transfer" src="static/images/comparisons/geneval_metrics.jpg"/>
+            </div>
+            
+            <h2 class="subtitle has-text-centered is-5">
+              GenEval benchmark results
+            </h2>
+          
+        </div>
+      </div>
+      <!--/ Cross domain. -->
+
+      <!-- New domain editing. -->
+    </div>
+    <!--/ New domain editing. -->
+  </div>
+</section>
+
+<!-- <section class="hero is-light is-small">
+  <div class="container is-max-desktop">
+
+      <div class="section-title">
+        <br>
+        <h2 class="title is-3">Downstream Models</h2>
+      </div>
+
+    <div class="columns is-centered"> -->
+
+      <!-- Cross domain. -->
+      <!-- <div class="column">
+        <div class="content">
+
+          <p>
+            Our pseudo-words work with downstream models. For example, if you're tired of your old photographs, you can spice them up by inserting some new friends using <a href="https://omriavrahami.com/blended-latent-diffusion-page/">Blended Latent Diffusion</a>: <br>
+          </p>
+            <div class="publication-img">
+              <img id="blended" src="static/images/blended/blended_diffusion.JPG"/>
+               <br>
+               <br>
+            </div>
+        </div>
+      </div> -->
+      <!--/ Cross domain. -->
+
+      <!-- New domain editing. -->
+    <!-- </div> -->
+    <!--/ New domain editing. -->
+  <!-- </div>
+</section> -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p>If you find our work useful, please cite our paper:</p>
+    <pre><code>Coming soon</code></pre>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <!-- <a class="icon-link" href="https://github.com/rinongal/textual_inversion" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. If you want to reuse their <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
