@@ -1,9 +1,9 @@
-# Textual Inversion
+# ComfyGen
 
-This is the repository that contains source code for the [Textual Inversion website](https://textual-inversion.github.io).
+This is the repository that contains source code for the [ComfyGen website](https://comfygen-paper.github.io/).
 It is based on the code from the [Nerfies website](https://nerfies.github.io). If you reuse this code, please credit them.
 
-If you find Textual Inversion useful for your work please cite:
+If you find ComfyGen useful for your work please cite:
 ```
 @article{placeholder
 }
